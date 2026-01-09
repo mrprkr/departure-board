@@ -1,0 +1,23 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "lcd_driver.c"
+        "wifi_manager.c"
+        "web_server.c"
+        "rgb_led.c"
+        "settings.c"
+        "tfnsw_client.c"
+    INCLUDE_DIRS
+        "."
+        "../include"
+    REQUIRES
+        driver
+        esp_lcd
+        esp_wifi
+        esp_http_server
+        esp_http_client
+        nvs_flash
+        esp_timer
+        json
+        lwip
+)
